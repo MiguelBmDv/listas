@@ -1,12 +1,13 @@
+import time
 #Se crea una lista vacia para agregar valores
 aprendices = []
 
 # Se crea un ciclo for, el cual tiene un rango de 30, este ciclo registrara los datos del estudiante, y al llegar al registro 30(29) directamente preguntara por el instructor y se registrara en la lista, estos tienen el .title para tener la primera mayuscula, y los valores estan concatenados en un string para que queden como un solo elemento en la lista
-for i in range(30):
+for i in range(3):
     nombre = input("Introduce un nombre: ").title()
     edad = int(input(f"Introduce la edad de {nombre}: "))
     aprendices.append(nombre + " " + str(edad))
-    if i == 29: 
+    if i == 2: 
       nombre = input("Introduce el nombre del tu instructor: ").title()
       edad = int(input(f"Introduce la edad de {nombre}: "))
       instru = (nombre + " " + str(edad))
@@ -59,9 +60,10 @@ if pre == "pass":
   print("\nLista sin el instructor\n")
   for i, elemento in enumerate(lista):
     print(f"# {i + 1}: {elemento}")
-
+  time.sleep(5)
   #Reacomodamos el valor de pre a rank para el siguiente if
   pre ="rank"
+  time.sleep(5)
 if pre == "rank":
   #Aqui se mostraran los primeros 10 aprendices, los del medio y los ultimos por medio de condicionales
   print("\n\nAhora mira los 10 aprendices que estan de primeras, los 10 de la mitad y los 10 ultimos :)")
@@ -95,6 +97,7 @@ if pre == "rank":
       print(f"# {i + 1}: {elemento}") 
 #Aqui viene la parte de interactuar con la lista, se puede saltar hasta aqui en la primera pregunta de s/n, este ciclo mantiene en true para hacer varias confirmaciones :)
 while True:
+  time.sleep(2)
   pre2=int(input("\n¿Quieres buscar un valor en la lista? Digite el numero segun lo que buscara:\n1.Nombre o inicial\n2.Estudiantes con cierta edad\n3.Salir\n\nDigite aqui: "))
 
   #Aqui viene la magia, son 3 opciones, la ultima es para salir del ciclo asi que no tendra un enfoque como tal.

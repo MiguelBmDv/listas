@@ -1,3 +1,4 @@
+import time
 #Este ejercicio es el mismo solo que se trabaja con diccionarios, lo realice por la simple de manejar, es mas facil ya que se esta manejando una clave y valor, algo que nos ahorra el hecho de buscar sentencias o funciones adicionales para separar cadenas de caracteres, aproveche el recurso de clave y valor para convertir el nombre en clave y la edad en valor :)
 
 #Hay algo que depronto no esta bien para el ejercicio y es que los diccionarios no manejan orden, por ende tuve que ingeniarmelas para hacer ciertos puntos
@@ -6,11 +7,11 @@
 aprendices = {}
 
 # Se crea un ciclo for, el cual tiene un rango de 30, este ciclo registrara los datos del estudiante, y al llegar al registro 30(29) directamente preguntara por el instructor y se registrara en la lista, estos tienen el .title para tener la primera mayuscula, y los valores estan concatenados en un string para que queden como un solo elemento en la lista
-for i in range(30):
+for i in range(3):
     nombre = input("Introduce un nombre: ").upper()
     edad = int(input(f"Introduce la edad de {nombre}: "))
     aprendices[nombre] = edad
-    if i == 29:
+    if i == 2:
       nombre = input("Introduce el nombre del tu instructor: ").upper()
       edad = int(input(f"Introduce la edad de {nombre}: "))
       instru = {nombre: edad, **aprendices} 
@@ -53,9 +54,10 @@ if pre == "pass":
   print("\nLista sin el instructor\n")
   for i, (nombre, edad) in enumerate(ordAprendiz.items()):
     print(f"# {i + 1}: Nombre: {nombre}, Edad: {edad}")
-
+  time.sleep(5)
   #Reacomodamos el valor de pre a rank para el siguiente if
   pre ="rank"
+  time.sleep(5)
 if pre == "rank":
   print("\n\nAhora mira los 10 aprendices que estan de primeras, los 10 de la mitad y los 10 ultimos :)")
   #Nada distinto a lo anterior, solo son for que muestren ciertos aprendices bajo sus condiciones.
@@ -67,10 +69,14 @@ if pre == "rank":
   for i, (nombre, edad) in enumerate(ordAprendiz.items()):
     if i >= 9 and i <= 19:
       print(f"# {i + 1}: Nombre: {nombre}, Edad: {edad}")
+    else:
+      print("No hay suficientes aprendices")
   print("\nLos 10 ultimos:")
   for i, (nombre, edad) in enumerate(ordAprendiz.items()):
     if i >= 19:
       print(f"# {i + 1}: Nombre: {nombre}, Edad: {edad}")
+    else:
+      print("No hay suficientes aprendices")
   
    #Aqui hacemos una nueva variable  para hacer mas procesos 
   nombre="incripted"
@@ -86,6 +92,7 @@ if pre == "rank":
 
 #Aqui viene la parte de interactuar el diccionario, se puede saltar hasta aqui en la primera pregunta de s/n, este ciclo mantiene en true para hacer varias confirmaciones :)   
 while True:
+  time.sleep(2)
   pre2=int(input("\n¿Quieres buscar un valor en la lista? Digite el numero segun lo que buscara:\n1.Nombre o que contenga x letra\n2.Estudiantes con cierta edad\n3.Salir\n\nDigite aqui: "))
 
   #Estos 3 condicionales son faciles de entender por el manejo del diccionario, aqui solo compara claves y valores, a diferencia de las listas que era con el split
