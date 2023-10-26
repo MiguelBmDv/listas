@@ -1,7 +1,7 @@
 # listas
-Ejercicio con listas completo, adicionalmente se traspaso a diccionarios y ver como funcionan los dos para una misma practica
-
+Ejercicio con listas completo, adicionalmente se traspaso a diccionarios y ver como funcionan los dos para una misma practica.
 Sentencias, funcionalidades o metodos a destacar:
+
 
 .format(Trae el valor de una variable) se ve mucho en los procesos de iteraciones donde el valor cambia.
 
@@ -27,4 +27,6 @@ al key ya que lo que se busca comparar no son las claves del diccionario si no s
 .items() se utiliza para obtener de igual forma los valores, pero al tiempo se usaran las claves, y asi trabajar con cada par consecutivamente.
 
 
+
 Listo, con todos estos conceptos sera mas facil comprender la logica y funcionalidad del programa :) <3
+
